@@ -2,13 +2,10 @@ import os
 import time
 from PyPDF2 import PdfReader
 from openai import OpenAI
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 def process_page_sync(page_content):
-    client = OpenAI(api_key=os.getenv("OPENAIKEY"))
+    client = OpenAI()
     prompt = f"You are a medical school residency evaluator, please give this section a score from 1-100. Here is the application: {page_content}"
 
     response = client.chat.completions.create(

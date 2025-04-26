@@ -3,13 +3,10 @@ import time
 import asyncio
 from PyPDF2 import PdfReader
 from openai import AsyncOpenAI
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 async def process_page_async(page_content):
-    client = AsyncOpenAI(api_key=os.getenv("OPENAIKEY"))
+    client = AsyncOpenAI()
     prompt = f"You are a medical school residency evaluator, please give this section a score from 1-100. Here is the application: {page_content}"
 
     response = await client.chat.completions.create(
