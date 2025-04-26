@@ -18,16 +18,16 @@ async def main():
     print(f"Asynchronous processing time: {async_time:.2f} seconds")
     print(f"Speed improvement: {(sync_time - async_time) / sync_time * 100:.2f}%")
 
-    print("\n=== Score Comparison ===")
-    print("Synchronous Results:")
-    for page_num, result in sync_results:
-        print(f"\nPage {page_num}:")
-        print(result)
+    # print("\n=== Score Comparison ===")
+    # print("Synchronous Results:")
+    # for page_num, result in sync_results:
+    #     print(f"\nPage {page_num}:")
+    #     print(result)
 
-    print("\nAsynchronous Results:")
-    for page_num, result in async_results:
-        print(f"\nPage {page_num}:")
-        print(result)
+    # print("\nAsynchronous Results:")
+    # for page_num, result in async_results:
+    #     print(f"\nPage {page_num}:")
+    #     print(result)
 
 
 if __name__ == "__main__":
